@@ -8,6 +8,7 @@ const app = Vue.createApp({
       title: 'The Final Empire',
       author: 'Brandon Sanderson',
       age: 45,
+      showInfo: true,
     }
   },
   methods: {
@@ -17,6 +18,12 @@ const app = Vue.createApp({
     changeTitle(title) {
       this.title = title
     },
+    showInfoHandler() {
+
+      this.showInfo = !this.showInfo
+
+      console.log(!this.showInfo);
+    }
   }
 });
 

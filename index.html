@@ -1,26 +1,28 @@
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://unpkg.com/vue@3.0.2"></script>
-  <title>Hello Vue</title>
-</head>
-<body>
-  <h1>Learning Vue :D</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+    <title>Hello Vue</title>
+  </head>
+  <body>
+    <h1>Learning Vue :D</h1>
 
-  <div id="app">
-    <p>{{ title }} - {{ author }} - {{ age }}</p>
+    <div id="app">
+      <div v-if="showInfo">
+        <p>{{ title }} - {{ author }} - {{ age }}</p>
+      </div>
 
-    <button v-on:click="age++">Increase Age</button>
-    <Br><Br>
-    <button @click="decreaseAge">Decrease Age</button>
-    <br><Br>
-    <button @click="changeTitle('Worlds Collide')">Change Title</button>
-  </div>
-  
-  
-  <script src="app.js"></script>
-</body>
+      <button v-on:click="age++">Increase Age</button>
+      <br /><br />
+      <button @click="decreaseAge">Decrease Age</button>
+      <br /><br />
+      <button @click="changeTitle('Worlds Collide')">Change Title</button>
+      <br /><br />
+      <button @click="showInfoHandler">Show Info</button>
+    </div>
 
+    <script src="app.js"></script>
+  </body>
 </html>
