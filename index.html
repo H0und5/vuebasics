@@ -14,7 +14,9 @@
 
     <button v-on:click="age++">Increase Age</button>
     <Br><Br>
-    <button v-on:click="age--">Decrease Age</button>
+    <button @click="decreaseAge">Decrease Age</button>
+    <br><Br>
+    <button @click="changeTitle('Worlds Collide')">Change Title</button>
   </div>
   
   

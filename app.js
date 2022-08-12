@@ -9,6 +9,14 @@ const app = Vue.createApp({
       author: 'Brandon Sanderson',
       age: 45,
     }
+  },
+  methods: {
+    decreaseAge() {
+      this.age--
+    },
+    changeTitle(title) {
+      this.title = title
+    },
   }
 });
 
