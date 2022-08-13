@@ -29,6 +29,15 @@ const app = Vue.createApp({
       this.showInfo = !this.showInfo
 
       console.log(!this.showInfo);
+    },
+    mouseOverEventHandler() {
+      console.log('mouse over event executed.');
+    },
+    mouseLeaveEventHandler() {
+      console.log('mouse leave event executed.');
+    },
+    doubleClickEventHandler() {
+      console.log('double click event executed.');
     }
   }
 });
