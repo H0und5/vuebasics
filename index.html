@@ -12,15 +12,15 @@
     <div id="app">
       <div v-if="showInfo">
         <p>{{ title }} - {{ author }} - {{ age }}</p>
+        <button @click="hideInfoHandler">Hide Book Info</button>
+      </div>
+      <div v-else="!showInfo">
+        <button @click="showInfoHandler">Show Book Info</button>
       </div>
 
-      <button v-on:click="age++">Increase Age</button>
-      <br /><br />
-      <button @click="decreaseAge">Decrease Age</button>
       <br /><br />
       <button @click="changeTitle('Worlds Collide')">Change Title</button>
       <br /><br />
-      <button @click="showInfoHandler">Show Info</button>
     </div>
 
     <script src="app.js"></script>

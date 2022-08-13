@@ -18,6 +18,12 @@ const app = Vue.createApp({
     changeTitle(title) {
       this.title = title
     },
+    hideInfoHandler() {
+
+      this.showInfo = !this.showInfo
+
+      console.log(!this.showInfo);
+    },
     showInfoHandler() {
 
       this.showInfo = !this.showInfo
