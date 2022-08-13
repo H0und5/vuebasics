@@ -38,10 +38,22 @@
       <br /><br />
 
       <!-- Mouse events -->
-      <div class="box" @mouseover="mouseOverEventHandler($event, 5)">Mouse over event</div>
-      <div class="box" @mouseleave="mouseLeaveEventHandler">Mouse leave event</div>
-      <div class="box" @dblclick="doubleClickEventHandler">Double click event</div>
-      <div class="box" @mousemove="mouseMoveEventHandler">Mouse move event</div>
+      <div class="box" @mouseover.prevent="mouseOverEventHandler($event, 5)">Mouse over event</div>
+      <div class="box" @mouseleave.prevent="mouseLeaveEventHandler">Mouse leave event</div>
+      <div class="box" @dblclick.prevent="doubleClickEventHandler">Double click event</div>
+      <div class="box" @mousemove.prevent="mouseMoveEventHandler">
+        <p>Mouse move event</p>
+        <p>{{ x }}</p>
+        <p>{{ y }}</p>
+
+      </div>
+
+      <!-- for loops  -->
+      <ul>
+        <li v-for="book in books">
+          {{ book }}
+        </li>
+      </ul>
 
     </div>
 

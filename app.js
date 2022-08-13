@@ -9,15 +9,23 @@ const app = Vue.createApp({
       author: 'Brandon Sanderson',
       age: 45,
       showInfo: true,
+      x: 0,
+      y: 0,
+      books: [
+        'Grid Systems',
+        'Inside Paragraphs: Typographic Fundamentals',
+        'New York City Transit Authority Graphics Standards Manual',
+        'Logo Modernism',
+        'The End of Print: Carson',
+        'Fresh Dialogue One: New Voices in Graphic Design',
+        'Reasons to Be Cheerful: The Life and Work of Barney Bubbles',
+        'The Art of Looking Sideways',
+        'Thoughts on Design',
+        'Inventory: The Work Of Christine Hill And Volksboutique',
+      ]
     }
   },
   methods: {
-    decreaseAge() {
-      this.age--
-    },
-    changeTitle(title) {
-      this.title = title
-    },
     hideInfoHandler() {
 
       this.showInfo = !this.showInfo
@@ -45,6 +53,12 @@ const app = Vue.createApp({
     },
     mouseMoveEventHandler(e) {
       console.log('mouse move event executed.', '\n', e)
+
+      this.x = e.offsetX;
+      this.y = e.offsetY;
+
+      console.log(this.x, this.y); 
+    
     }
   }
 });
