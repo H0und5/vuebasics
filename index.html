@@ -26,7 +26,11 @@
 
       <!-- Conditionally rendering values through vue's show directive if true, affecting the DOM. -->
       <div v-if="showInfo">
-        <p>{{ title }} - {{ author }} - {{ age }}</p>
+        <ul>
+          <li v-for="book in books">
+            {{ book }}
+          </li>
+        </ul>
         <button @click="hideInfoHandler">Hide Book Info</button>
       </div>
 
@@ -49,11 +53,7 @@
       </div>
 
       <!-- for loops  -->
-      <ul>
-        <li v-for="book in books">
-          {{ book }}
-        </li>
-      </ul>
+
 
     </div>
 
