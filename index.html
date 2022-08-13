@@ -10,20 +10,21 @@
     <h1>Learning Vue :D</h1>
 
     <div id="app">
+      <!-- Conditionally renders it out through CSS, not through the DOM. -->
       <div v-show="showInfo">Currently showing books:</div>
 
 
-      <!-- Conditionally rendering values through vue's show directive if true -->
+      <!-- Conditionally rendering values through vue's show directive if true, affecting the DOM. -->
       <div v-if="showInfo">
         <p>{{ title }} - {{ author }} - {{ age }}</p>
         <button @click="hideInfoHandler">Hide Book Info</button>
       </div>
 
-      <!-- If showInfo is not true, conditionally render the button action to render showing info -->
+      <!-- If showInfo is not true, conditionally render the button action to render showing info, affecting the DOM. -->
       <div v-else="!showInfo">
         <button @click="showInfoHandler">Show Book Info</button>
       </div>
-      
+
       <br /><br />
     </div>
 
