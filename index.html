@@ -20,17 +20,25 @@
     <h1>Learning Vue :D</h1>
 
     <div id="app">
+
+      <!-- Attribute binding -->
+      <a href="url">Click this link here</a>
+
       <!-- Conditionally renders it out through CSS, not through the DOM. -->
       <div v-show="showInfo">Currently showing books:</div>
 
 
       <!-- Conditionally rendering values through vue's show directive if true, affecting the DOM. -->
       <div v-if="showInfo">
+
+              <!-- for loops  -->
+        
         <ul>
           <li v-for="book in books">
             {{ book }}
           </li>
         </ul>
+        
         <button @click="hideInfoHandler">Hide Book Info</button>
       </div>
 
@@ -51,8 +59,6 @@
         <p>{{ y }}</p>
 
       </div>
-
-      <!-- for loops  -->
 
 
     </div>

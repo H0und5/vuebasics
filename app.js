@@ -22,7 +22,8 @@ const app = Vue.createApp({
         'The Art of Looking Sideways',
         'Thoughts on Design',
         'Inventory: The Work Of Christine Hill And Volksboutique',
-      ]
+      ],
+      tempURL: 'https://www.omnagarkar.com',
     }
   },
   methods: {
