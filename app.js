@@ -23,7 +23,7 @@ const app = Vue.createApp({
         'Thoughts on Design',
         'Inventory: The Work Of Christine Hill And Volksboutique',
       ],
-      tempURL: 'https://www.omnagarkar.com',
+      tempUrl: 'https://www.omnagarkar.com',
     }
   },
   methods: {
