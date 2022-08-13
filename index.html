@@ -10,16 +10,20 @@
     <h1>Learning Vue :D</h1>
 
     <div id="app">
+      <div v-show="showInfo">Currently showing books:</div>
+
+
+      <!-- Conditionally rendering values through vue's show directive if true -->
       <div v-if="showInfo">
         <p>{{ title }} - {{ author }} - {{ age }}</p>
         <button @click="hideInfoHandler">Hide Book Info</button>
       </div>
+
+      <!-- If showInfo is not true, conditionally render the button action to render showing info -->
       <div v-else="!showInfo">
         <button @click="showInfoHandler">Show Book Info</button>
       </div>
-
-      <br /><br />
-      <button @click="changeTitle('Worlds Collide')">Change Title</button>
+      
       <br /><br />
     </div>
 
