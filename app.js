@@ -42,6 +42,9 @@ const app = Vue.createApp({
     },
     doubleClickEventHandler(e) {
       console.log('double click event executed.', '\n', e.type, '\n', e);
+    },
+    mouseMoveEventHandler(e) {
+      console.log('mouse move event executed.', '\n', e)
     }
   }
 });
