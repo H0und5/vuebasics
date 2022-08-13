@@ -30,14 +30,14 @@ const app = Vue.createApp({
 
       console.log(!this.showInfo);
     },
-    mouseOverEventHandler() {
-      console.log('mouse over event executed.');
+    mouseOverEventHandler(e) {
+      console.log('mouse over event executed.', '\n', e.type, '\n',  e);
     },
-    mouseLeaveEventHandler() {
-      console.log('mouse leave event executed.');
+    mouseLeaveEventHandler(e) {
+      console.log('mouse leave event executed.', '\n', e.type, '\n', e);
     },
-    doubleClickEventHandler() {
-      console.log('double click event executed.');
+    doubleClickEventHandler(e) {
+      console.log('double click event executed.', '\n', e.type, '\n', e);
     }
   }
 });
